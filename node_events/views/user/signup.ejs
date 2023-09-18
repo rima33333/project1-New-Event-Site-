@@ -1,0 +1,65 @@
+<%-include('../partials/header')-%>
+<%-include('../partials/navbar')-%>
+<%# This is an EJS comment and won't be rendered in the final output %>
+
+<div class="container text-white">
+    <div class="row mt-4">
+        <div class="col-md-6 mt-4 custom-bg">
+             
+        </div>
+        <div class="col-md-6   ">
+          
+          
+            <%-include('../partials/flashMessages')-%> 
+            
+            <form action="/users/signup"method="post">
+                <div class=" f mt-4"> 
+                    <h2>Sign up:</h2>
+                <div class="form-group ">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" class="form-control"  placeholder="Enter your email">
+                </div>
+                <div class="form-group mt-4">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <input type="password" name="password" id="password" class="form-control"  placeholder="Enter your password">
+                        <div class="input-group-append">
+                            <button class="togglePassword btn btn-light" type="button" data-target="#password" data-state="hide">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-4">
+                    <label for="confirm_password">Confirm password</label>
+                    <div class="input-group">
+                        <input type="password" name="confirm_password" id="confirm_password" class="form-control"  placeholder="confirm your password">
+                        <div class="input-group-append">
+                            <button class="togglePassword btn btn-light" type="button" data-target="#confirm_password" data-state="hide">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+              
+                
+                    
+                 
+          
+ </div>
+
+            </form>
+
+           
+        </div>
+       
+    </div>
+    
+</div>
+ 
+
+<%-include('../partials/footer')-%> 

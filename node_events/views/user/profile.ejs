@@ -1,0 +1,54 @@
+<%- include('../partials/header') -%>
+<%- include('../partials/navbar') -%>
+<style>
+    /* Custom Styling */
+
+     
+
+    .avatar {
+        border-radius: 50%; /* Make the image circular */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        width: 200px; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+    }
+
+     
+
+     
+</style>
+<div class="container text-white">
+    <div class="row mt-4">
+        <div class="col-md-3 mt-3">
+            <img  class="avatar"  src="<%= '/uploads/imgs/' + user.avatar%>" >
+            
+        </div>
+
+        <div class="col-md-9 ">
+
+            <h1 class="display-4">Profile </h1>
+            <hr>
+       
+            <%- include('../partials/flashMessages') -%>  
+            <% if (messages.error) { %>
+                <div class="alert alert-danger">
+                    <%= messages.error %>
+                </div>
+            <% } %>    
+            <p>
+                <% if (user) { %>
+                 welcome .. your email is <%= user.email %>
+                    <%}%>
+            </p>
+            <form action="/users/uploadAvatar" method="POST" enctype="multipart/form-data">
+                <input type="file" name="avatar" id="avatar" onchange="readURL(this)">
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <hr>
+            <h2  >Image Preivew</h2>
+            <img class="avatar"  src="#" alt="" id="imagePlaceholder" height="200px" width="200px" style="display: none;">
+        </div>
+    </div>
+</div>
+
+    
+<%- include('../partials/footer') -%>

@@ -1,0 +1,79 @@
+<%-include('../partials/header')-%>
+<%-include('../partials/navbar')-%>
+<%# This is an EJS comment and won't be rendered in the final output %>
+
+<div class="container text-white">
+    
+    <div class="row ">
+        <div class="col-md-6 mt-4 custom-bg">
+             
+        </div>
+        <div class="col-md-6  ">
+             
+             
+              <%-include('../partials/flashMessages')-%>  
+           
+            
+
+            <form action="/users/login"method="post" >
+                <div class=" f mt-4">
+                    
+                <div class="form-group  ">
+                    <h2>Login Here</h2>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" class="form-control"  placeholder="Enter your email">
+                </div>
+                <div class="form-group ">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password">
+                        <div class="input-group-append">
+                            <button class="togglePassword btn btn-light" type="button" data-target="#password" data-state="hide">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                 
+                <div class="form-group mt-1">
+                    <button type="submit" class="btnn btn-primary">Login</button>
+                </div>
+                 
+                 <p class="link">Don't have an account<br>
+                    <a href="/users/signup mb-1">Sign up </a> here</a></p>
+                    <p class="liw mb-1">Log in with</p>
+
+                    <div class="icons">
+                        <!-- Facebook Icon with link -->
+                        <a href="https://www.facebook.com/yourprofilelink"><ion-icon name="logo-facebook"></ion-icon></a>
+                    
+                        <!-- Instagram Icon with link -->
+                        <a href="https://www.instagram.com/yourprofilelink"><ion-icon name="logo-instagram"></ion-icon></a>
+                    
+                        <!-- Twitter Icon with link -->
+                        <a href="https://twitter.com/yourprofilelink"><ion-icon name="logo-twitter"></ion-icon></a>
+                    
+                        <!-- Google Icon with link (assuming you're referring to Google Plus, which is discontinued as of my last update) -->
+                        <a href="https://plus.google.com/yourprofilelink"><ion-icon name="logo-google"></ion-icon></a>
+                    
+                        <!-- Skype Icon with link (this could be a Skype call link or your Skype profile link) -->
+                        <a href="skype:yourusername?call"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+                    
+                 
+            </div>
+            
+
+            </form>
+
+         
+
+        </div>
+    </div>
+</div>
+ 
+
+<%-include('../partials/footer')-%>    
+    
+

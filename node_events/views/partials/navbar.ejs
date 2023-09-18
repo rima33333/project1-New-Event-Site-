@@ -1,0 +1,31 @@
+ <!--navbar                           ********************************-->
+ <div class="navbar ">
+        <div class="icon">
+             
+            <a class="logo" href="/home"> alger Events</a>
+        </div>
+  
+        <div class="menu">
+            <ul>
+                <li><a href="/events">HOME</a></li>
+                <li><a href="/events/creat">Add new Event</a></li>
+                <li><a href="/users/profile"> my profile</a></li>
+                <% if (!user)  { %>
+                <li><a href="/users/login">Login</a></li>
+                <li><a href="/users/signup">Sign up</a></li>
+               
+                
+                <% } else { %>
+                <li><a href="/users/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        </div>
+  
+        <div class="search">
+          <input class="srch" type="search" id="searchInput" placeholder="Type to text">
+          <button class="btn" onclick="performSearch()">Search</button>
+      </div>
+  
+    </div> 
+    
+    <br>
