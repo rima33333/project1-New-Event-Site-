@@ -33,7 +33,7 @@ providing an added layer of security.
   <img src= "https://github.com/rima33333/project1-New-Event-Site-/blob/master/node_events/public/img/n3.png?raw=true">
  </div>
  <div>
-  <h2> Sin up  page  </h2>
+  <h2> Sign up  page  </h2>
   <img src= "https://github.com/rima33333/project1-New-Event-Site-/blob/master/node_events/public/img/n4.png?raw=true">
  </div>
  <div>
