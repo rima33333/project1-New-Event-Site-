@@ -1,0 +1,15 @@
+npm init -y
+node app
+ npm i --save nodemon
+npm i express
+npm install ejs
+npm install bootstrap
+ npm install jquery
+npm install express-session connect-flash
+npm install passport passport-local bcrypt-nodejs
+npm install axios 
+ npm install moment
+npm install --save express-validator 
+npm install multer --save 
+npm install body-parser  
+npm install mongoose
